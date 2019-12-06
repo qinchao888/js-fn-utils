@@ -34,7 +34,26 @@ format 支持格式：
 
 ```js
 // 常见格式
-console.log(getDate('yyyy年mm月dd日 hh时mm分ss秒')) //2019年12月06日 15时45分30秒
-console.log(getDate('yyyy-mm-dd hh:mm:ss')) // 2019-12-06 15:45:30
-console.log(getDate('yyyy/mm/dd hh:mm:ss')) // 2019/12/06 15:45:30
+getDate('yyyy年mm月dd日 hh时mm分ss秒') //2019年12月06日 15时45分30秒
+getDate('yyyy-mm-dd hh:mm:ss') // 2019-12-06 15:45:30
+getDate('yyyy/mm/dd hh:mm:ss') // 2019/12/06 15:45:30
 ```
+
+### 千分位分割符
+
+#### thousandSeparatorFormat(value)
+
+value: 合法的数值
+
+```js
+// 案例
+thousandSeparatorFormat(12345) // 12,345
+thousandSeparatorFormat(12345.12345) // 12,345.12345
+thousandSeparatorFormat(0.12345) // 0.12345
+```
+
+### 检测设备类型
+
+#### checkDevice()
+
+返回值：android | ios | 未知类型

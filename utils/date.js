@@ -8,7 +8,7 @@ function formatTime (time, length, unit) {
 
 function handleTime(format, time, dateReg, timeReg) {
   time = time ? new Date(time) : new Date(); // 默认为获取当前日期
-  var isDate = format.includes('yyyy') ? true : false; // 判断是年月日还是时分秒
+  var isDate = format.indexOf('yyyy') !== -1 ? true : false; // 判断是年月日还是时分秒
   var lengthList = format.split(/[^a-z]/).filter(function (item) {
     return item !== '';
   }).map(function (item) { 
