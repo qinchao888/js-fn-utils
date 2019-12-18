@@ -6,5 +6,6 @@ module.exports = {
   getDate: date.getDate,
   thousandSeparatorFormat: number.thousandSeparatorFormat,
   checkDevice: tools.checkDevice,
-  checkBrowser: tools.checkBrowser
+  checkBrowser: tools.checkBrowser,
+  checkIsMobile: tools.checkIsMobile
 }
