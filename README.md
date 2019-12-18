@@ -57,3 +57,15 @@ thousandSeparatorFormat(0.12345) // 0.12345
 #### checkDevice()
 
 返回值：android | ios | 未知类型
+
+### 检测浏览器内核
+
+#### checkBrowser()
+
+返回值：trident | presto | webkit | gecko
+
+### 检测是移动设备还是pc端设备
+
+#### checkIsMobile()
+
+返回值：true | false

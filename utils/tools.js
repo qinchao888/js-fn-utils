@@ -24,7 +24,13 @@ function checkBrowser () { // 检测浏览器内核
  return Object.keys(browserList)[Object.values(browserList).indexOf(true)];
 }
 
+function checkIsMobile () { // 检测是移动设备还是pc端设备
+  var reg = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone|Opera Mini|MiuiBrowser|XiaoMi)/i
+  return reg.test(navigator.userAgent)
+}
+
 module.exports = {
   checkDevice: checkDevice,
-  checkBrowser: checkBrowser
+  checkBrowser: checkBrowser,
+  checkIsMobile: checkIsMobile
 }
