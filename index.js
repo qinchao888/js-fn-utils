@@ -7,5 +7,9 @@ module.exports = {
   thousandSeparatorFormat: number.thousandSeparatorFormat,
   checkDevice: tools.checkDevice,
   checkBrowser: tools.checkBrowser,
-  checkIsMobile: tools.checkIsMobile
+  checkIsMobile: tools.checkIsMobile,
+  getRandomColor: tools.getRandomColor,
+  getUpperCaseArr: tools.getUpperCaseArr,
+  getLowerCaseArr: tools.getLowerCaseArr,
+  seperateStr: tools.seperateStr
 }

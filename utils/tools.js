@@ -26,11 +26,38 @@ function checkBrowser () { // 检测浏览器内核
 
 function checkIsMobile () { // 检测是移动设备还是pc端设备
   var reg = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone|Opera Mini|MiuiBrowser|XiaoMi)/i
-  return reg.test(navigator.userAgent)
+  return reg.test(navigator.userAgent);
+}
+
+function getRandomColor () { // 获取16进制随机色
+  return '#' + ((Math.random() * 0xffffff + 1) | 0).toString(16).padStart(6, '0');
+}
+
+function getUpperCaseArr (len) { // 获取由大写的英文字母构成的数组，[A, B, ...]
+  return Array.from({ length: len || 26 }, function (item, index) {
+    return String.fromCharCode(65 + index);
+  });
+}
+
+function getLowerCaseArr (len) { // 获取由小写的英文字母构成的数组，[a, b, ...]
+  return Array.from({ length: len || 26 }, function (item, index) {
+    return String.fromCharCode(97 + index);
+  });
+}
+
+function seperateStr (str, len) { // 将字符串按照指定长度分割成数组
+  var reg = new RegExp('(?:([^]{' + (len || 10) + '}))');
+  return str.split(reg).filter(function (val) {
+    return !!val;
+  });
 }
 
 module.exports = {
   checkDevice: checkDevice,
   checkBrowser: checkBrowser,
-  checkIsMobile: checkIsMobile
+  checkIsMobile: checkIsMobile,
+  getRandomColor: getRandomColor,
+  getUpperCaseArr: getUpperCaseArr,
+  getLowerCaseArr: getLowerCaseArr,
+  seperateStr: seperateStr
 }

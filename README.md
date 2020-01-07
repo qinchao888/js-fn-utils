@@ -69,3 +69,49 @@ thousandSeparatorFormat(0.12345) // 0.12345
 #### checkIsMobile()
 
 返回值：true | false
+
+### 获取16进制随机色
+
+#### getRandomColor()
+
+返回值：16进制颜色名，形如：#00ff00
+
+### 获取由大写的英文字母构成的数组，[A, B, ...]
+
+#### getUpperCaseArr(len)
+
+len: 默认值为26
+
+```js
+// 例：
+getUpperCaseArr() // ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
+getUpperCaseArr(2) // ['A', 'B']
+```
+
+### 获取由小写的英文字母构成的数组，[a, b, ...]
+
+#### getLowerCaseArr(len)
+
+len: 默认值为26
+
+```js
+// 例：
+getLowerCaseArr() // ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+getLowerCaseArr(2) // ['a', 'b']
+```
+
+### 将字符串按照指定长度分割成数组
+
+#### seperateStr(str, len)
+
+str: 需要分割的字符串
+
+len: 默认值为10
+
+```js
+var str = 'this is a test 12345678';
+seperateStr(str) // ['this is a ', 'test 12345', '678']
+seperateStr(str, 12) // ['this is a te', 'st 12345678']
+```
