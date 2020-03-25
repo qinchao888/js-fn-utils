@@ -115,3 +115,19 @@ var str = 'this is a test 12345678';
 seperateStr(str) // ['this is a ', 'test 12345', '678']
 seperateStr(str, 12) // ['this is a te', 'st 12345678']
 ```
+
+### rgb转16进制
+
+#### RGBToHex(rgb)
+
+```js
+RGBToHex('rgb(0, 16, 255)') // #0010ff
+```
+
+### 16进制转rgb
+
+#### HexToRGB(hex)
+
+```js
+HexToRGB('#10ffff') // rgb(16, 255, 255)
+```

@@ -1,6 +1,7 @@
-var date = require('./utils/date.js');
-var number = require('./utils/number.js');
-var tools = require('./utils/tools.js');
+var date = require('./lib/date.js');
+var number = require('./lib/number.js');
+var tools = require('./lib/tools.js');
+var color = require('./lib/color.js');
 
 module.exports = {
   getDate: date.getDate,
@@ -11,5 +12,7 @@ module.exports = {
   getRandomColor: tools.getRandomColor,
   getUpperCaseArr: tools.getUpperCaseArr,
   getLowerCaseArr: tools.getLowerCaseArr,
-  seperateStr: tools.seperateStr
+  seperateStr: tools.seperateStr,
+  RGBToHex: color.RGBToHex,
+  HexToRGB: color.HexToRGB
 }
