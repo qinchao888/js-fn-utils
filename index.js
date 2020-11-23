@@ -5,6 +5,12 @@ var color = require('./lib/color.js');
 
 module.exports = {
   getDate: date.getDate,
+  getFormatDate: date.getFormatDate,
+  getFormatTime: date.getFormatTime,
+  getDawnTime: date.getDawnTime,
+  getNightTime: date.getNightTime,
+  getBeginOfMonth: date.getBeginOfMonth,
+  getEndOfMonth: date.getEndOfMonth,
   thousandSeparatorFormat: number.thousandSeparatorFormat,
   checkDevice: tools.checkDevice,
   checkBrowser: tools.checkBrowser,

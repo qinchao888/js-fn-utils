@@ -1,42 +1,70 @@
 ### 获取格式化的日期
 
-#### getDate(format, time)
+#### getDate(time)
 
-##### 参数: 
-
-| 参数名称   |      值    |
-|----------|:-------------:|
-| format   |默认值：'yyyy-mm-dd hh:mm:ss'|
-| time     |默认值：new Date()|
-
-format 支持格式：
-
-```
-1. 'hh:mm:ss'
-2. 'hh:mm:s'
-3. 'hh:m:ss'
-4. 'hh:m:s'
-5. 'h:mm:ss'
-6. 'h:mm:s'
-7. 'h:m:ss'
-8. 'h:m:s'
-9. 'yyyy-mm-dd'
-10. 'yyyy-mm-d'
-11. 'yyyy-m-dd'
-12. 'yyyy-m-d'
-13. 'yyyy'
-14. 'yyyy-mm'
-15. 'hh'
-16. 'hh:mm'
-```
-
-其中的 : 和 - 可以被非空字符替换。
+输出格式形如：yyyy-mm-dd hh:mm:ss
 
 ```js
-// 常见格式
-getDate('yyyy年mm月dd日 hh时mm分ss秒') //2019年12月06日 15时45分30秒
-getDate('yyyy-mm-dd hh:mm:ss') // 2019-12-06 15:45:30
-getDate('yyyy/mm/dd hh:mm:ss') // 2019/12/06 15:45:30
+getDate() // 2020-11-23 17:12:15
+getDate('2020/01/01') // 2020-01-01 00:00:00
+```
+
+#### getFormatDate(time)
+
+输出格式形如：yyyy-mm-dd
+
+```js
+getFormatDate() // 2020-11-23
+getFormatDate('2020/01/01') // 2020-01-01
+```
+
+#### getFormatTime(time)
+
+输出格式形如： hh:mm:ss
+
+```js
+getFormatTime() // 17:12:15
+getFormatTime('2020/01/01') // 00:00:00
+```
+
+#### getDawnTime(time)
+
+参数：默认值为当前时间
+
+描述：获取指定日期的凌晨的时间
+
+```js
+getDawnTime('2020/01/01') // Wed Jan 01 2020 00:00:00 GMT+0800 (中国标准时间)
+```
+
+#### getNightTime(time)
+
+参数：默认值为当前时间
+
+描述：获取指定日期的傍晚的时间
+
+```js
+getNightTime('2020/01/01') // Wed Jan 01 2020 23:59:59 GMT+0800 (中国标准时间)
+```
+
+#### getBeginOfMonth(time)
+
+参数：默认值为当前时间
+
+描述：获取指定日期的月初时间
+
+```js
+getBeginOfMonth('2020/11/10 10:00:00') // Sun Nov 01 2020 00:00:00 GMT+0800 (中国标准时间)
+```
+
+#### getEndOfMonth(time)
+
+参数：默认值为当前时间
+
+描述：获取指定日期的月末时间
+
+```js
+getEndOfMonth('2020/11/10 10:00:00') // Mon Nov 30 2020 23:59:59 GMT+0800 (中国标准时间)
 ```
 
 ### 千分位分割符
