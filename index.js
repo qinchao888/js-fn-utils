@@ -13,6 +13,7 @@ module.exports = {
   getUpperCaseArr: tools.getUpperCaseArr,
   getLowerCaseArr: tools.getLowerCaseArr,
   seperateStr: tools.seperateStr,
+  setTitle: tools.setTitle,
   RGBToHex: color.RGBToHex,
-  HexToRGB: color.HexToRGB
+  HexToRGB: color.HexToRGB,
 }

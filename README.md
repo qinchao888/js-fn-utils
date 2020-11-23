@@ -131,3 +131,12 @@ RGBToHex('rgb(0, 16, 255)') // #0010ff
 ```js
 HexToRGB('#10ffff') // rgb(16, 255, 255)
 ```
+
+### 设置文档标题
+
+#### setTitle(val)
+
+```js
+// 设置<title></title>之间的内容
+setTitle('这里设置文档标题')
+```
